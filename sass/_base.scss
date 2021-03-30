@@ -1,0 +1,51 @@
+$color-primary:hsl(300, 43%, 22%);
+$color-text-dark:hsl(303, 10%, 53%);
+$color-text-light:hsl(300, 24%, 96%);
+
+
+$color-pink:hsl(333, 80%, 67%);
+
+
+
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land){ // width < 1200 ?
+        font-size: 56.25% ;  //1rem = 9px , 9/16  
+    }
+    
+    
+    @include respond(tab-port){ // width < 900 ?
+        font-size: 50%;    //1rem = 8px ,8/16
+    }
+    
+    @include respond(big-desktop){ // min-width = 1800 ?
+        font-size: 75%; //1rem = 12px, 12/16    
+    }
+}
+
+body{
+    font-family: Spartan;
+    font-weight: 400;
+    color:$color-primary;
+    background-image: url('../images/bg-pattern-top-desktop.svg'),url('../images/bg-pattern-bottom-desktop.svg');
+    background-position: left top,right bottom;
+    background-repeat: no-repeat;
+
+    @include respond(phone){
+        background-image: url('../images/bg-pattern-top-mobile.svg'),url('../images/bg-pattern-bottom-mobile.svg');
+    }
+}

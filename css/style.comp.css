@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-family: Spartan;
+  font-weight: 400;
+  color: #502050;
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  background-position: left top,right bottom;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg"); } }
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      height: 40rem; } }
+  .header .heading-primary {
+    display: inline-block;
+    flex-grow: 1; }
+    @media only screen and (max-width: 31.25em) {
+      .header .heading-primary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    .header .heading-primary__p1 {
+      display: inline-block;
+      font-size: 4rem;
+      max-width: 40%;
+      margin: 1rem 20%; }
+      @media only screen and (max-width: 68.75em) {
+        .header .heading-primary__p1 {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 50em) {
+        .header .heading-primary__p1 {
+          max-width: 60%; } }
+      @media only screen and (max-width: 37.5em) {
+        .header .heading-primary__p1 {
+          font-size: 2.5rem;
+          max-width: 80%; } }
+    .header .heading-primary__p2 {
+      font-size: 1.6rem;
+      margin: 0 20%;
+      color: #937b92;
+      display: block; }
+      @media only screen and (max-width: 31.25em) {
+        .header .heading-primary__p2 {
+          margin-bottom: 3rem; } }
+  .header .heading-ratings {
+    font-size: 1.6rem;
+    color: #502050;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 45%;
+    margin-right: 10%; }
+    @media only screen and (max-width: 68.75em) {
+      .header .heading-ratings {
+        flex-basis: 55%; } }
+    @media only screen and (max-width: 62.5em) {
+      .header .heading-ratings {
+        flex-basis: 75%; } }
+    @media only screen and (max-width: 50em) {
+      .header .heading-ratings {
+        flex-basis: 95%; } }
+    .header .heading-ratings__reviews--star {
+      margin: 0 1rem; }
+      .header .heading-ratings__reviews--star .star-icon {
+        height: 1.6rem;
+        width: auto;
+        margin: 0 .1rem; }
+        @media only screen and (max-width: 68.75em) {
+          .header .heading-ratings__reviews--star .star-icon {
+            height: 1.4rem; } }
+    .header .heading-ratings__reviews--text {
+      margin: 0 3rem; }
+    .header .heading-ratings__reviews--1 {
+      align-self: flex-start; }
+    .header .heading-ratings__reviews--2 {
+      align-self: center; }
+    .header .heading-ratings__reviews--3 {
+      align-self: flex-end; }
+    .header .heading-ratings__reviews--1, .header .heading-ratings__reviews--2, .header .heading-ratings__reviews--3 {
+      display: flex;
+      background-color: #f7f2f7;
+      padding: 1rem 1.5rem;
+      border-radius: .5rem; }
+      @media only screen and (max-width: 50em) {
+        .header .heading-ratings__reviews--1, .header .heading-ratings__reviews--2, .header .heading-ratings__reviews--3 {
+          flex-direction: column;
+          align-items: center;
+          width: 30rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .header .heading-ratings__reviews--1, .header .heading-ratings__reviews--2, .header .heading-ratings__reviews--3 {
+          align-self: flex-start; } }
+      @media only screen and (max-width: 31.25em) {
+        .header .heading-ratings__reviews--1, .header .heading-ratings__reviews--2, .header .heading-ratings__reviews--3 {
+          margin-bottom: 3rem; } }
+
+.buyers {
+  display: flex;
+  justify-content: space-around;
+  margin: 7rem 10rem;
+  height: 25rem; }
+  @media only screen and (max-width: 50em) {
+    .buyers {
+      margin: 7rem 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .buyers {
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 50rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .buyers {
+      height: 60rem; } }
+  .buyers__block--1 {
+    align-self: flex-start; }
+  .buyers__block--2 {
+    align-self: center; }
+  .buyers__block--3 {
+    align-self: flex-end; }
+  .buyers__block--1, .buyers__block--2, .buyers__block--3 {
+    background-color: #502050;
+    padding: 1.5rem 1.5rem;
+    color: #f7f2f7;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-basis: 30%;
+    border-radius: .5rem;
+    height: 20.5rem; }
+    @media only screen and (max-width: 68.75em) {
+      .buyers__block--1, .buyers__block--2, .buyers__block--3 {
+        height: 22rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .buyers__block--1, .buyers__block--2, .buyers__block--3 {
+        height: 24rem;
+        align-self: flex-start; } }
+    @media only screen and (max-width: 37.5em) {
+      .buyers__block--1, .buyers__block--2, .buyers__block--3 {
+        margin-top: 3rem; } }
+  .buyers__profile {
+    display: flex;
+    align-items: center; }
+  .buyers__image {
+    height: 5rem;
+    width: auto;
+    border-radius: 10rem;
+    margin: 1rem 2rem 1.5rem 1.5rem; }
+  .buyers__name-text {
+    font-size: 1.2rem;
+    font-weight: 700; }
+  .buyers__name .verified {
+    color: #ee68a4; }
+  .buyers__review {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    word-spacing: .1rem;
+    letter-spacing: .1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .buyers__review {
+        font-size: 1.2rem; } }
+
+.container {
+  display: block;
+  margin: 8rem 0; }

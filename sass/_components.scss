@@ -1,0 +1,228 @@
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @include respond(phone-small){
+        flex-direction: column;
+        align-items: center;
+        height: 40rem;
+    }
+
+    .heading-primary{
+        display: inline-block;
+        flex-grow: 1;
+
+        @include respond(phone-small){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__p1{
+            display: inline-block;
+            font-size:4rem;
+            max-width: 40%;
+            margin:1rem 20%;
+            @include respond(tab-land-small){
+                font-size: 3rem;
+            }
+
+            @include respond(tab-port-small){
+                max-width: 60%;   
+            }
+
+            @include respond(phone){
+                font-size: 2.5rem;
+                max-width: 80%;
+            }
+            @include respond(phone-small){
+                // max-width: 100%;
+                // margin: 0 10%;
+            }
+
+        }
+
+        &__p2{
+            font-size: 1.6rem;
+            margin: 0 20%;
+            color:$color-text-dark;
+            display: block;
+
+            @include respond(phone-small){
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .heading-ratings{
+        font-size:1.6rem;
+        color:$color-primary;
+        padding:1rem 1rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-basis: 45%;
+        margin-right: 10%;
+
+        @include respond(tab-land-small){
+            flex-basis: 55%;
+        }
+
+        @include respond(tab-port-large){
+            flex-basis: 75%;
+        }
+
+        @include respond(tab-port-small){
+            flex-basis: 95%;
+        }
+
+        // @include respond(phone-large){
+            
+        // }
+
+        &__reviews{
+            
+            &--star{
+                margin:0 1rem;
+
+                .star-icon{
+                    height: 1.6rem;
+                    width: auto;
+                    margin: 0 .1rem;
+
+                   @include respond(tab-land-small){
+                       height: 1.4rem;
+                   }
+                }
+            }
+            
+
+            &--text{
+                margin:0 3rem;
+            }
+
+            &--1{ align-self: flex-start; }
+            &--2{ align-self: center; }
+            &--3{ align-self: flex-end; }
+
+            &--1,&--2,&--3{
+                display: flex; 
+                background-color: $color-text-light;
+                padding: 1rem 1.5rem;
+                border-radius: .5rem;
+                   
+                @include respond(tab-port-small){
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30rem;
+                }
+
+                @include respond(phone){
+                    align-self: flex-start;
+                }
+
+                @include respond(phone-small){
+                    margin-bottom: 3rem;
+                }
+            }
+
+            
+        }
+    }
+}
+
+// Buyer Reviews
+
+.buyers{
+    display: flex;
+    justify-content: space-around;
+    margin: 7rem 10rem;
+    height: 25rem;
+
+    @include respond(tab-port-small){
+        margin: 7rem 2rem;
+    }
+
+    @include respond(phone){
+        flex-direction: column;
+        // margin: 18rem 10rem;
+        justify-content: space-evenly;
+        height: 50rem;
+    }
+
+    @include respond(phone-small){
+        height: 60rem;
+    }
+
+    &__block{
+
+        &--1{align-self: flex-start;}
+        &--2{align-self: center;}
+        &--3{align-self: flex-end;}
+
+        &--1,&--2,&--3{
+            background-color: $color-primary;
+            padding:1.5rem 1.5rem;
+            color:$color-text-light;
+            display: flex;   
+            flex-direction: column;
+            align-items: baseline;
+            flex-basis: 30%;
+            border-radius: .5rem;
+            height: 20.5rem;
+
+            @include respond(tab-land-small){
+                height: 22rem;
+            }
+            
+            @include respond(tab-port-large){
+                height: 24rem;
+                align-self: flex-start;
+            }   
+
+            @include respond(phone){
+                // flex-basis: 50%;
+                margin-top: 3rem;
+            }
+        }
+
+
+    }
+
+    &__profile{
+        display: flex;
+        align-items: center;
+    }
+
+    &__image{
+        height: 5rem;
+        width: auto;
+        border-radius: 10rem;
+        margin: 1rem 2rem 1.5rem 1.5rem;
+    }
+
+    &__name{
+
+        &-text{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .verified{
+            color:$color-pink;
+        }
+    }
+
+    &__review{
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
+        word-spacing: .1rem;
+        letter-spacing: .1rem;
+
+        @include respond(phone){
+            font-size: 1.2rem;
+        }
+    }
+}
